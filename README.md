@@ -237,6 +237,41 @@ Binaries for Linux, Windows and Mac are available as tarballs in the [release pa
   docker run --rm -it -v ~/.kube/config:/root/.kube/config k9s-docker:0.1
   ```
 
+### TPEEG custom image
+
+  This fork also includes a `TPEEG` branded image and a helper runner script for `k3s`.
+
+  Build the custom image with:
+
+  ```shell
+  docker buildx build \
+    --platform linux/amd64 \
+    --build-arg TARGETOS=linux \
+    --build-arg TARGETARCH=amd64 \
+    --build-arg GIT_REV=$(git rev-parse --short HEAD) \
+    -t k9s-tpeeg-custom:1.0.0 \
+    --load .
+  ```
+
+  Run it directly:
+
+  ```shell
+  docker run --rm -it \
+    --platform linux/amd64 \
+    --network host \
+    -v /etc/rancher/k3s/k3s.yaml:/root/.kube/config:ro \
+    k9s-tpeeg-custom:1.0.0
+  ```
+
+  Or use the helper script:
+
+  ```shell
+  chmod +x ./run-k9s-docker.sh
+  ./run-k9s-docker.sh
+  ```
+
+  For more details, see [TPEEG_DOCKER.md](TPEEG_DOCKER.md).
+
 ---
 
 ## PreFlight Checks
