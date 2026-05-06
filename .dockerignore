@@ -1,0 +1,16 @@
+/k8s
+/change_logs
+.github
+.semaphore
+.vscode
+assets
+/dist
+/execs
+/notes
+/skins
+!/skins/tpeeg.yaml
+README.md
+LICENSE
+cov.out
+/k9s
+.travis.yml

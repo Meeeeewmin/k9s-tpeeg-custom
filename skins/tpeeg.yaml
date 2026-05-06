@@ -1,0 +1,61 @@
+# TPEEG skin
+k9s:
+  body:
+    fgColor: white
+    bgColor: default
+    logoColor: orange
+    logoColorInfo: lightskyblue
+    logoColorWarn: gold
+    logoColorError: indianred
+    logoColorMsg: white
+  info:
+    fgColor: lightskyblue
+    sectionColor: orange
+  frame:
+    border:
+      fgColor: orange
+      focusColor: deepskyblue
+    menu:
+      fgColor: white
+      keyColor: orange
+      numKeyColor: deepskyblue
+    crumbs:
+      fgColor: black
+      bgColor: orange
+      activeColor: white
+    status:
+      newColor: deepskyblue
+      modifyColor: lightskyblue
+      addColor: mediumspringgreen
+      errorColor: indianred
+      highlightColor: orange
+      killColor: slategray
+      completedColor: gray
+    title:
+      fgColor: white
+      bgColor: default
+      highlightColor: orange
+      counterColor: deepskyblue
+      filterColor: gold
+  views:
+    table:
+      fgColor: white
+      bgColor: default
+      cursorColor: black
+      header:
+        fgColor: black
+        bgColor: orange
+        sorterColor: deepskyblue
+        selectedSortColumnColor: white
+    yaml:
+      keyColor: orange
+      colonColor: white
+      valueColor: deepskyblue
+    logs:
+      fgColor: white
+      bgColor: default
+      indicator:
+        fgColor: orange
+        bgColor: default
+        toggleOnColor: mediumspringgreen
+        toggleOffColor: gray
