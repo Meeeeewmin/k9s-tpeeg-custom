@@ -18,5 +18,5 @@ func TestNewSplash(t *testing.T) {
 	assert.Equal(t, 0, x)
 	assert.Equal(t, 0, y)
 	assert.Equal(t, 15, w)
-	assert.Equal(t, 10, h)
+	assert.Equal(t, 7, h)
 }

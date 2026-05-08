@@ -249,7 +249,7 @@ Binaries for Linux, Windows and Mac are available as tarballs in the [release pa
     --build-arg TARGETOS=linux \
     --build-arg TARGETARCH=amd64 \
     --build-arg GIT_REV=$(git rev-parse --short HEAD) \
-    -t k9s-tpeeg-custom:1.0.0 \
+    -t k9s-tpeeg-custom:1.2 \
     --load .
   ```
 
@@ -260,7 +260,7 @@ Binaries for Linux, Windows and Mac are available as tarballs in the [release pa
     --platform linux/amd64 \
     --network host \
     -v /etc/rancher/k3s/k3s.yaml:/root/.kube/config:ro \
-    k9s-tpeeg-custom:1.0.0
+    k9s-tpeeg-custom:1.2
   ```
 
   Or use the helper script:

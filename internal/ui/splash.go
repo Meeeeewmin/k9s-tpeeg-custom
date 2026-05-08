@@ -13,22 +13,20 @@ import (
 
 // LogoSmall K9s small log.
 var LogoSmall = []string{
-	`_______________                     `,
+	`_______________`,
 	`\__   __/  __  \  __________________`,
 	`  |   |\    ___/ /  ___/  ___/  ___/`,
 	`  |   | \   \   /  __/   __/   __ \ `,
 	`  |___|  \___\ /_____/_____/\_____/`,
-	`                                    `,
 }
 
 // LogoBig K9s big logo for splash page.
 var LogoBig = []string{
-	`_______________                     `,
+	`_______________`,
 	`\__   __/  __  \  __________________`,
 	`  |   |\    ___/ /  ___/  ___/  ___/`,
 	`  |   | \   \   /  __/   __/   __ \ `,
 	`  |___|  \___\ /_____/_____/\_____/`,
-	`                                    `,
 }
 
 // Splash represents a splash screen.
@@ -43,16 +41,20 @@ func NewSplash(styles *config.Styles, version string) *Splash {
 
 	logo := tview.NewTextView()
 	logo.SetDynamicColors(true)
+	logo.SetWordWrap(false)
+	logo.SetWrap(false)
 	logo.SetTextAlign(tview.AlignCenter)
 	s.layoutLogo(logo, styles)
 
 	vers := tview.NewTextView()
 	vers.SetDynamicColors(true)
+	vers.SetWordWrap(false)
+	vers.SetWrap(false)
 	vers.SetTextAlign(tview.AlignCenter)
 	s.layoutRev(vers, version, styles)
 
 	s.SetDirection(tview.FlexRow)
-	s.AddItem(logo, 10, 1, false)
+	s.AddItem(logo, len(LogoBig)+2, 1, false)
 	s.AddItem(vers, 1, 1, false)
 
 	return &s
@@ -60,10 +62,7 @@ func NewSplash(styles *config.Styles, version string) *Splash {
 
 func (*Splash) layoutLogo(t *tview.TextView, styles *config.Styles) {
 	logo := strings.Join(LogoBig, fmt.Sprintf("\n[%s::b]", styles.Body().LogoColor))
-	_, _ = fmt.Fprintf(t, "%s[%s::b]%s\n",
-		strings.Repeat("\n", 2),
-		styles.Body().LogoColor,
-		logo)
+	_, _ = fmt.Fprintf(t, "\n[%s::b]%s\n", styles.Body().LogoColor, logo)
 }
 
 func (*Splash) layoutRev(t *tview.TextView, rev string, styles *config.Styles) {

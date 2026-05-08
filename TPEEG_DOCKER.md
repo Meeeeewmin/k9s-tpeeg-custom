@@ -10,7 +10,7 @@ docker buildx build \
   --build-arg TARGETOS=linux \
   --build-arg TARGETARCH=amd64 \
   --build-arg GIT_REV=$(git rev-parse --short HEAD) \
-  -t 10.166.249.129:5000/riseiot/amd64/k9s_test:1.0.0 \
+  -t 10.166.249.129:5000/riseiot/amd64/k9s_test:1.2 \
   --load .
 ```
 
@@ -18,14 +18,14 @@ If your build host is already `amd64` Linux and your Docker installation support
 
 ## Run
 
-`entrypoint.sh` runs `k9s -A` by default, so this is enough:
+`entrypoint.sh` runs `k9s --splashless -A` by default, so this is enough:
 
 ```bash
 docker run --rm -it \
   --platform linux/amd64 \
   --network host \
   -v /etc/rancher/k3s/k3s.yaml:/root/.kube/config:ro \
-  10.166.249.129:5000/riseiot/amd64/k9s_test:1.0.0
+  10.166.249.129:5000/riseiot/amd64/k9s_test:1.2
 ```
 
 If you want the shortest host-side command, use:
