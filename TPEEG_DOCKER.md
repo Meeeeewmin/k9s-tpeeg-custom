@@ -10,7 +10,7 @@ docker buildx build \
   --build-arg TARGETOS=linux \
   --build-arg TARGETARCH=amd64 \
   --build-arg GIT_REV=$(git rev-parse --short HEAD) \
-  -t 10.166.249.129:5000/riseiot/amd64/k9s_test:1.2 \
+  -t 10.166.249.129:5000/riseiot/amd64/k9s_test:1.4 \
   --load .
 ```
 
@@ -25,7 +25,7 @@ docker run --rm -it \
   --platform linux/amd64 \
   --network host \
   -v /etc/rancher/k3s/k3s.yaml:/root/.kube/config:ro \
-  10.166.249.129:5000/riseiot/amd64/k9s_test:1.2
+  10.166.249.129:5000/riseiot/amd64/k9s_test:1.4
 ```
 
 If you want the shortest host-side command, use:
