@@ -23,7 +23,7 @@ RUN make build VERSION=${VERSION} GIT_REV=${GIT_REV}
 
 # -----------------------------------------------------------------------------
 # Build the final Docker image
-FROM alpine:3.23.3
+FROM alpine:3.24.0
 ARG TARGETARCH=amd64
 ARG KUBECTL_VERSION="v1.32.2"
 
