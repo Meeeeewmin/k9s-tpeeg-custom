@@ -134,8 +134,8 @@ github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc/go.mod h1:LOuy
 github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751/go.mod h1:LOuyumcjzFXgccqObfd/Ljyb9UuFJ6TxHnclSeseNhc=
 github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
 github.com/alecthomas/units v0.0.0-20190717042225-c3de453c63f4/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
-github.com/anchore/clio v0.0.0-20250715152405-a0fa658e5084 h1:7DUAXEdAxoANPlDgxYiaSRKnWnTygvdrrWhnmvEjNLg=
-github.com/anchore/clio v0.0.0-20250715152405-a0fa658e5084/go.mod h1:42dWox8z4//b898OIELsQnSdYq9q1aCXkwp5fKF+BEU=
+github.com/anchore/clio v0.1.0 h1:lrlSgD38V0T6TLjOG5Kn3miEXCQyYr6ZlwTSnW1WIJg=
+github.com/anchore/clio v0.1.0/go.mod h1:z4l6oHaU8x/yQ3BnES4Ekh4eLqFSYlj1jQpk7waPkJs=
 github.com/anchore/fangs v0.0.0-20250716230140-94c22408c232 h1:aVC6r9h5wGNh8BYTW3CXxOdPoZzY/bBRWne1NvSTlO8=
 github.com/anchore/fangs v0.0.0-20250716230140-94c22408c232/go.mod h1:Zees1AEKNpXIRgdVAMYWITncarLFiPOtEQ7rl45V/h0=
 github.com/anchore/go-collections v0.0.0-20251016125210-a3c352120e8c h1:eoJXyC0n7DZ4YvySG/ETdYkTar2Due7eH+UmLK6FbrA=
